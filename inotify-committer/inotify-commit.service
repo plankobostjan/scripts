@@ -1,0 +1,16 @@
+# This is a systemd service file for the inotify-commit.sh script
+
+[Unit]
+Description=inotify-commit
+
+[Service]
+# change working directory to suit your needs
+WorkingDirectory=/home/bplanko
+# change this PATH to match yours
+ExecStart=/home/bplanko/.local/bin/inotify-commit.sh
+ExecStop=/bin/kill $MAINPID
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

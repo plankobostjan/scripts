@@ -1,0 +1,26 @@
+#!/bin/bash
+if [ -e .commit ]
+    then
+    echo "----------------------------------------------------"
+    echo "Generating checksums..."
+    echo "----------------------------------------------------"
+    FILES=$(find . -type f -name "*.sh" ! -path "./.git/*" ! -name "checksums.txt" )
+    while IFS= read -r FILE
+    do
+        sha256sum $FILE >> tmp-checksums.txt
+        echo "Generated checksum for: $FILE"
+    done < <(printf '%s\n' "$FILES")
+    mv tmp-checksums.txt checksums.txt
+    echo "----------------------------------------------------"
+    echo "Checksum generation finished!"
+    echo "Committing changes..."
+    echo "----------------------------------------------------"
+    rm .commit
+    git add checksums.txt
+    git commit --amend -C HEAD --no-verify
+    echo "----------------------------------------------------"
+    echo "Changes committed!"
+    echo "All done!"
+    echo "----------------------------------------------------"
+fi
+exit
