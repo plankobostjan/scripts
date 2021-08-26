@@ -2,5 +2,5 @@ fd5a21e0a971b4fe94942a8bb05f3548b41d6bcf7f4548dd52a965ff9b6b7769  ./output-redir
 ef7ff697c619ad0e897b2dc380f25878a2f3db351a9f538052c62d3aad2473c2  ./checksums-generator.sh
 05375a66927d5c95e69456c8abe4ed55f20e31b5eec22c4f9b93bb7b56c434c4  ./file-is-empty.sh
 f0eb5f771aff37f9c435cc22d0c719d42f9c3b08af570dfc7b24967c0d74a0a6  ./multi-dig.sh
-41f7c66d7946a1e0ddf2df9a651b25b50b6fd75fe2b748e36cd4725dc1323520  ./inotify-committer/inotify-commit.sh
+6739b8d5f310a18f99a8dd5d3ddd164513b7624ac4a990959ecbe279a27136a4  ./inotify-committer/inotify-commit.sh
 61f49e4855fba2b9639c0d02eaa734f079023962ccf899c7aebe042ee9463a54  ./mkexec.sh

@@ -7,6 +7,6 @@ do
     cd $HOME
     inotifywait -q -e close_write $DATA
     git add .
-    git commit -m 'autocommit on change' -m 'Modified files: %w'
+    git commit -m "$(curl -s whatthecommit.com/index.txt)"
     git push origin master
 done
