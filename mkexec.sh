@@ -130,7 +130,7 @@ esac
 select_type
 select_title
 get_data
-if [ $append == 1 ]
+if [[ $append == 1 ]]
 then
     cat $title > temp
     _print_to_file
