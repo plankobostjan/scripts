@@ -1,3 +1,15 @@
 #!/bin/sh 
+
+set -euo pipefail
+
 touch .commit 
+
+echo "----------------------------------------------------"
+echo "Fixing permissions..."
+echo "----------------------------------------------------"
+find . -type f -name "*.sh" ! -perm 755 -exec chmod 755 {} +
+echo "----------------------------------------------------"
+echo "Permissions fixed!"
+echo "----------------------------------------------------"
+
 exit
