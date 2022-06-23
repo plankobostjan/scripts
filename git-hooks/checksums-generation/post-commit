@@ -7,7 +7,7 @@ if [ -e .commit ]
     echo "----------------------------------------------------"
     echo "Generating checksums..."
     echo "----------------------------------------------------"
-    FILES=$(find . -type f -name "*.sh" ! -path "./.git/*" ! -name "checksums.txt" )
+    FILES=$(find . -type f -name "*.sh" ! -path "./.git/*" ! -name "checksums.txt" | sort )
     while IFS= read -r FILE
     do
         sha256sum $FILE >> tmp-checksums.txt
