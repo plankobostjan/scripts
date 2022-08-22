@@ -7,7 +7,7 @@ touch .commit
 echo "----------------------------------------------------"
 echo "Fixing permissions..."
 echo "----------------------------------------------------"
-find . -type f -name "*.sh" ! -perm 755 -printf "%p\n" -exec chmod 755 {} +
+find . -type f -name "*.sh" ! -perm 755 -printf "%p\n" -exec chmod 755 {} + -exec git add {} +
 echo "----------------------------------------------------"
 echo "Permissions fixed!"
 echo "----------------------------------------------------"
